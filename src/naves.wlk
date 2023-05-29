@@ -97,11 +97,11 @@ class NaveDeCombate inherits NaveEspacial {
 }
 
 class NaveHospital inherits NaveDePasajeros {
-	var property tienePreparadoLosQuirofanos
-	override method estaTranquila() = super() and !tienePreparadoLosQuirofanos
+	var property quirofanosListos
+	override method estaTranquila() = super() and !quirofanosListos
 	override method recibirAmenaza() { 
 		super()
-		tienePreparadoLosQuirofanos = true
+		quirofanosListos = true
 	}
 }
 
